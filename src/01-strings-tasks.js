@@ -94,7 +94,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  return value.replace(/\s+/gu, '');
+  return value.trim();
 }
 
 /**
