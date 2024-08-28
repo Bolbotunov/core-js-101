@@ -230,13 +230,13 @@ function getRectangleString(width, height) {
 function encodeToRot13(str) {
   const alp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
   const rot = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-  let ind = [];
-  let arr = str.split('');
+  const ind = [];
+  const arr = str.split('');
   arr.forEach((item) => {
-    let a = alp.indexOf(item);
+    const a = alp.indexOf(item);
     ind.push(a);
   });
-  for (let i = 0; i < arr.length; i++){
+  for (const i = 0; i < arr.length; i++){
     ind[i] = rot[ind[i]];
   }
   return ind.join('');
