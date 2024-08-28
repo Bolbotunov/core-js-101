@@ -201,12 +201,12 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  let line = '─';
-  let space = ' ';
-  let lineV = `│${space.repeat(width-1)}│\n`;
-  let a = `┌${line.repeat(width-1)}┐\n`;
-  let b = `└${line.repeat(width-1)}┘\n`;
-  let total = a+lineV.repeat(height-2)+b;
+  const line = '─';
+  const space = ' ';
+  const lineV = `│${space.repeat(width-1)}│\n`;
+  const a = `┌${line.repeat(width-1)}┐\n`;
+  const b = `└${line.repeat(width-1)}┘\n`;
+  const total = a+lineV.repeat(height-2)+b;
   return total;
 }
 
