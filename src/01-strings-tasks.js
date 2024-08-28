@@ -238,7 +238,7 @@ function encodeToRot13(str) {
   });
   for (let i = 0; i < arr.length; i++) {
     ind[i] = rot[ind[i]];
-  }
+  };
   return ind.join('');
 }
 
