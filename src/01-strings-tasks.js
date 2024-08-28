@@ -233,9 +233,9 @@ function encodeToRot13(str) {
   const ind = [];
   const arr = str.split('');
   arr.forEach((item) => {
-    const a = alp.indexOf(item);
+    let a = alp.indexOf(item);
     ind.push(a);
-  })
+  });
   for (let i = 0; i < arr.length; i++) {
     ind[i] = rot[ind[i]];
   }
