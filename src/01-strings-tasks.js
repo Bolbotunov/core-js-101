@@ -227,21 +227,21 @@ function getRectangleString(width, height) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(str) {
-  const alp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  const rot = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-  const ind = [];
-  const arr = str.split('');
-  const a;
-  for (let i = 0; i < arr.length; i++) {
-    a = alp.indexOf(arr[i]);
-    ind.push(a);
-  }
-  for (let i = 0; i < arr.length; i++) {
-    ind[i] = rot[ind[i]];
-  }
-  return ind.join('');
-}
+// function encodeToRot13(str) {
+//   const alp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+//   const rot = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+//   const ind = [];
+//   const arr = str.split('');
+//   const a;
+//   for (let i = 0; i < arr.length; i++) {
+//     a = alp.indexOf(arr[i]);
+//     ind.push(a);
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     ind[i] = rot[ind[i]];
+//   }
+//   return ind.join('');
+// }
 
 /**
  * Returns true if the value is string; otherwise false.
