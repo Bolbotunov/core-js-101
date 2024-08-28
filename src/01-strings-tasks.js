@@ -232,7 +232,7 @@ function encodeToRot13(str) {
   const rot = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
   const ind = [];
   const arr = str.split('');
-  let a;
+  const a;
   arr.forEach((item) => {
     a = alp.indexOf(item);
     ind.push(a);
