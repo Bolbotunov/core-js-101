@@ -227,9 +227,26 @@ function getRectangleString(width, height) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  const alp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const rot = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  const ind = [];
+  const arr = str.split('');
+  let a;
+  for (let i = 0; i < arr.length; i += 1) {
+    a = alp.indexOf(arr[i]);
+    ind.push(a);
+  }
+  for (let i = 0; i < arr.length; i += 1) {
+    if (ind[i] === -1) {
+      ind[i] = arr[i];
+    } else {
+      ind[i] = rot[ind[i]];
+    }
+  }
+  return ind.join('');
 }
+
 /**
  * Returns true if the value is string; otherwise false.
  * @param {string} value
