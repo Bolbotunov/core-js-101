@@ -86,8 +86,8 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(/* a, b */) {
-  throw new Error('Not implemented');
+function getLinearEquationRoot(a, b) {
+  return -b / a;
 }
 
 
@@ -109,8 +109,11 @@ function getLinearEquationRoot(/* a, b */) {
  *   (0,1) (0,1)     => 0
  *   (0,1) (1,2)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const multSum = (x1 * x2) + (y1 * y2);
+  const sqrtOne = Math.sqrt(x1 * y1);
+  const sqrtTwo = Math.sqrt(x2 * y2);
+  return Math.acos(multSum - sqrtOne * sqrtTwo);
 }
 
 /**
@@ -125,8 +128,9 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
-  throw new Error('Not implemented');
+function getLastDigit(value) {
+  const a = String(value);
+  return a.charAt([a.length - 1]);
 }
 
 
