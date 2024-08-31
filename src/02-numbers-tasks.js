@@ -214,7 +214,7 @@ function isPrime(n) {
   if(Math.sqrt(n) % 2 !== 0) {
   return true;
 } else {
-    return false;
+  return false;
 }
 }
 
