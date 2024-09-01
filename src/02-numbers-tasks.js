@@ -232,9 +232,8 @@ function isPrime(n) {
 function toNumber(value, def) {
   if (Number(value)) {
     return value;
-  } else {
-    return def;
-}
+  }
+  return def;
 }
 
 module.exports = {
